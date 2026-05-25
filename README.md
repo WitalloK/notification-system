@@ -1,0 +1,44 @@
+# Notification System
+
+Projeto simples desenvolvido em **Node.js com TypeScript** para simular um sistema de notificações usando os padrões de projeto **Observer** e **Strategy**.
+
+O projeto também possui uma automação com **GitHub Actions** para executar testes automaticamente e ajudar a impedir a integração de código com falhas.
+
+## Objetivo
+
+Este projeto atende duas propostas de trabalho:
+
+1. Criar um sistema de notificações utilizando os padrões **Observer** e **Strategy**.
+2. Configurar uma pipeline de Integração Contínua com **GitHub Actions**, executando testes automatizados.
+
+## Tecnologias utilizadas
+
+- Node.js
+- TypeScript
+- Jest
+- GitHub Actions
+
+## Estrutura de pastas
+
+```txt
+notification-system/
+├── .github/
+│   └── workflows/
+│       └── main.yml
+│
+├── src/
+│   ├── core/
+│   │   ├── events/
+│   │   ├── observers/
+│   │   └── strategies/
+│   │
+│   ├── services/
+│   ├── app.ts
+│   └── index.ts
+│
+├── tests/
+├── package.json
+├── tsconfig.json
+├── jest.config.ts
+├── README.md
+└── .gitignore
