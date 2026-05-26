@@ -1,6 +1,8 @@
 import { EventManager } from "./core/events/EventManager";
 import { EventTypes } from "./core/events/EventTypes";
 import { EmailObserver } from "./core/observers/EmailObserver";
+import { SmsObserver } from "./core/observers/SmsObserver";
+import { LogObserver } from "./core/observers/LogObserver";
 import { EmailStrategy } from "./core/strategies/EmailStrategy";
 import { SmsStrategy } from "./core/strategies/SmsStrategy";
 import { LogStrategy } from "./core/strategies/LogStrategy";
@@ -16,8 +18,8 @@ export function app(): void {
   const eventManager = new EventManager();
 
   const emailObserver = new EmailObserver(emailStrategy);
-  const smsObserver = new EmailObserver(smsStrategy);
-  const logObserver = new EmailObserver(logStrategy);
+  const smsObserver = new SmsObserver(smsStrategy);
+  const logObserver = new LogObserver(logStrategy);
 
   eventManager.subscribe(emailObserver);
   eventManager.subscribe(smsObserver);
