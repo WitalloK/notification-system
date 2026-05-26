@@ -1,5 +1,5 @@
 describe("Initial test", () => {
   it("should run tests successfully", () => {
-    expect(true).toBe(true);
+    expect(true).toBe(false);
   });
 });
